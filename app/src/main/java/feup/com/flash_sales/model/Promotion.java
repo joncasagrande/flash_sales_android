@@ -8,11 +8,11 @@ public class Promotion {
 
     private String name;
     private String description;
-    private String image;
+    private int image;
     private String price;
     private String storeId;
 
-    public Promotion(String name, String description, String image, String pric1e,String storeId) {
+    public Promotion(String name, String description, int image, String pric1e,String storeId) {
         this.name = name;
         this.description = description;
         this.image = image;
@@ -36,11 +36,11 @@ public class Promotion {
         this.description = description;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 

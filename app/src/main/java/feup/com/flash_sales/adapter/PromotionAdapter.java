@@ -2,6 +2,7 @@ package feup.com.flash_sales.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,9 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 import butterknife.BindView;
@@ -64,9 +68,12 @@ public class PromotionAdapter extends RecyclerView.Adapter<PromotionAdapter.View
         if(promotion != null) {
             holder.storeName.setText(promotion.getName());
             holder.description.setText(promotion.getDescription());
-            if(!promotion.getImage().isEmpty()) {
+            if(promotion.getImage() > 0) {
+
                 Picasso.with(context)
                         .load(promotion.getImage())
+                        //.fit()
+                        .resize(200, 200)
                         .into(holder.imageView);
             }
             holder.promotionRow.setOnClickListener(new View.OnClickListener() {

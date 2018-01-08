@@ -3,6 +3,7 @@ package feup.com.flash_sales.utils;
 import java.util.Arrays;
 import java.util.List;
 
+import feup.com.flash_sales.R;
 import feup.com.flash_sales.model.Address;
 import feup.com.flash_sales.model.Promotion;
 import feup.com.flash_sales.model.Store;
@@ -13,13 +14,12 @@ import feup.com.flash_sales.model.Store;
 
 public class Mock {
     public static List<Promotion> getPromotions() {
-        return Arrays.asList(new Promotion("MWN","Anda quentinha no inverno com o Cachecol","https://goo.gl/AkUxm3", "","1"),
-                new Promotion("Pepe jeans","Calça jeans de qualidade e preço atrativo","https://goo.gl/NvpcUW", "","2"),
-                new Promotion("Dielmar","Casaco estilo masculinho para inverno","https://goo.gl/5StQhV", "","3"),
-                new Promotion("","lindo cachecol pela metade do preço","https://goo.gl/mSPxnV", "","4"),
-                new Promotion("Saccor","Casaco estilo canadiana, da coleção Casual. Fecho com ziper e botões alamares, dois bolsos exteriores e dois interiores. Elástico interior ajustável. Confecionado em lã.","https://goo.gl/u12FGK", "","5"),
-                new Promotion("M\'Choices", "Aproveita para deslumbrar com o Vestido Comprido Boho Preto. Um estilo hippie chic que não irá passar despercebido!",
-                             "https://goo.gl/iMeueM","","6"));
+        return Arrays.asList(new Promotion("NewYorker","Cachecol Xedrez Vermelho", R.drawable.ny, "","1"),
+                new Promotion("Levi's","Calças Jeans Casual",R.drawable.levi, "","2"),
+                new Promotion("H&M","Casaco Inverno Xedrez",R.drawable.hem, "","3"),
+                new Promotion("PANDORA","Pulseira Prata e Rosa",R.drawable.pandora, "","4"),
+                new Promotion("SPRINGFIELD","Camisola de lã Beige",R.drawable.springfield, "","5"),
+                new Promotion("KIKO Milano", "Lipstick Rosa",R.drawable.kiko,"","6"));
     }
 
 
