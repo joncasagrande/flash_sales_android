@@ -29,6 +29,18 @@
             android:name=".StoreActivity"
             android:theme="@style/AppTheme"/>
 
+        <activity
+            android:name=".SignUpActivity"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".PreferencesActivity"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme"/>
+
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDBZUCmozbu-WxzlEYDnFu2U1hs9Z5gKPM"/>
     </application>

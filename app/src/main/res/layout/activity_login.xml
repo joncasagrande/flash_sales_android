@@ -1,0 +1,85 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:titleTextColor="@color/white"
+            app:title="@string/action_sign_in"/>
+
+        <EditText
+            android:id="@+id/emailET"
+            android:hint="@string/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="89dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/passwdET"
+            android:hint="@string/senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailET"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/doLoginBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_orange"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:text="@string/fazer_login"
+            android:layout_below="@id/passwdET"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:onClick="login"
+            />
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#808080"
+            android:layout_below="@id/doLoginBT"
+            android:layout_margin="5dp"/>
+        <Button
+            android:id="@+id/doRecoveryBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="#808080"
+            android:text="@string/recuperar_senha"
+            android:layout_below="@id/divider"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:id="@+id/doCadastroBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_dark_orange"
+            android:textColor="@android:color/white"
+            android:text="@string/fazer_cadastro"
+            android:layout_margin="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="signUp"/>
+
+    </RelativeLayout>

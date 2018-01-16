@@ -1,5 +1,6 @@
 package feup.com.flash_sales;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -102,13 +103,15 @@ public class HomeActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.action_preferencia) {
+            startActivity(new Intent(this, PreferencesActivity.class));
+
             Toast.makeText(this,"Faremos um filtro com suas preferencias!", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.action_fav) {
             Toast.makeText(this,"Lista de lugares favoritos!", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.action_cadastro) {
-            Toast.makeText(this,"Cadastro realizado!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, SignUpActivity.class));
         } else if (id == R.id.action_login) {
-            Toast.makeText(this,"Login realizado!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, LoginActivity.class));
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;

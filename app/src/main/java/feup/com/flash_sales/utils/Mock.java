@@ -5,6 +5,7 @@ import java.util.List;
 
 import feup.com.flash_sales.R;
 import feup.com.flash_sales.model.Address;
+import feup.com.flash_sales.model.Preferences;
 import feup.com.flash_sales.model.Promotion;
 import feup.com.flash_sales.model.Store;
 
@@ -22,6 +23,14 @@ public class Mock {
                 new Promotion("KIKO Milano", "Lipstick Rosa",R.drawable.kiko,"","6"));
     }
 
+    public static List<Preferences> getPreferences() {
+        return Arrays.asList(
+                new Preferences("tech"), new Preferences("moda femininas"),
+                new Preferences("moda masculina"), new Preferences("moda infantil"),
+                new Preferences("toys"), new Preferences("restauraçao"), new Preferences("cinema"),
+                new Preferences("carros"),new Preferences("sports"));
+    }
+
 
     public static Address getAddress(int id){
         Address address;
@@ -29,14 +38,16 @@ public class Mock {
              address = new Address("1","Alameda Shop","Rua dos Campeões Europeus","29-198",
                      "","Bela Vista", "Porto", "Porto");
              address.setZipcode("4350-414");
-             address.setLatitude(41.155225);
-             address.setLongitude(-8.5865261);
+
+             address.setLatitude(41.163501);
+             address.setLongitude(-8.583346);
+        }else {
+            address = new Address("2", "ViaCatarina Shopping", "Rua de Santa Catarina", "312",
+                    "", "Aliados", "Porto", "Porto");
+            address.setZipcode("4000-008");
+            address.setLatitude(41.148971);
+            address.setLongitude(-8.606059);
         }
-        address = new Address("2", "ViaCatarina Shopping", "Rua de Santa Catarina", "312",
-                "", "Aliados", "Porto", "Porto");
-        address.setZipcode("4000-008");
-        address.setLatitude(41.148971);
-        address.setLongitude(-8.606059);
         return address;
     }
 
